@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Notas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Simulador de Notas</h1>
+    <div id="identificar">
+        <label for="nombre">¿Cómo te llamás?</label>
+        <input type="text" id="nombre">
+        <button id="guardarNombre">Guardar nombre</button>
+    </div>
+    <div id="decision" style="display: none;">
+        <p id="saludo"></p>
+        <button id="guardarNotas">Guardar notas</button>
+    </div>
+    <div id="notas" style="display: none;">
+        <div>
+            <h3>Notas de Historia</h3>
+            <input type="number" id="notaHistoria1" placeholder="Nota 1">
+            <input type="number" id="notaHistoria2" placeholder="Nota 2">
+            <input type="number" id="notaHistoria3" placeholder="Nota 3">
+        </div>
+        <div>
+            <h3>Notas de Matemática</h3>
+            <input type="number" id="notaMatematica1" placeholder="Nota 1">
+            <input type="number" id="notaMatematica2" placeholder="Nota 2">
+            <input type="number" id="notaMatematica3" placeholder="Nota 3">
+        </div>
+        <button id="calcularPromedios">Calcular promedios</button>
+    </div>
+    <div id="resultados" style="display: none;">
+        <p id="promedioHistoria"></p>
+        <p id="promedioMatematica"></p>
+    </div>
+    <div id="otraVez" style="display: none;">
+        <button id="reiniciar">Otro alumno</button>
+    </div>
+    <div id="contenedorNotas" style="display: none;">
+        <h2>Notas ingresadas</h2>
+        <div id="notasIngresadas" class="flex-container"></div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

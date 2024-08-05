@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
+    text-align: center;
+}
+
+h1 {
+    color: #4682b4;
+}
+
+#identificar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    background-color: #b0e0e6;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 20px;
+}
+
+#identificar label, #identificar input, #identificar button {
+    margin: 10px;
+}
+
+#saludo {
+    font-size: 1.5em;
+    color: #2e8b57;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+}
+
+.flex-container > div {
+    background-color: #b0e0e6;
+    border: 1px solid #4682b4;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 20px;
+    flex: 1 1 200px;
+}
+
+input[type="number"] {
+    margin: 5px;
+    width: 80px;
+}
+
+button {
+    background-color: #4682b4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2e8b57;
+}
+
+#resultados, #otraVez, #contenedorNotas {
+    margin: 20px;
+}
+
+#contenedorNotas {
+    background-color: #e0ffff;
+    padding: 20px;
+    border-radius: 10px;
+}
