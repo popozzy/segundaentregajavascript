@@ -1,4 +1,15 @@
-let alumnos = [];
+let alumnos = JSON.parse(localStorage.getItem('alumnos')) || []; 
+
+document.addEventListener("DOMContentLoaded", function() {
+    Swal.fire({
+        title: "¡Bienvenido!",
+        text: "Aquí podrás ingresar tus notas",
+        imageUrl: "..//segundaentrega/imagenes/logo.jpg",
+        imageWidth: 400,
+        imageHeight: 200,
+        imageAlt: "Custom image"
+    });
+});
 
 document.getElementById("guardarNombre").addEventListener("click", function() {
     let nombre = document.getElementById("nombre").value;
@@ -36,13 +47,17 @@ document.getElementById("calcularPromedios").addEventListener("click", function(
     document.getElementById("otraVez").style.display = "block";
 
     let nombre = document.getElementById("nombre").value;
-    alumnos.push({
+    let nuevoAlumno = {
         nombre: nombre,
         historia: notasHistoria,
         matematica: notasMatematica,
         promedioHistoria: promedioHistoria,
         promedioMatematica: promedioMatematica
-    });
+    };
+
+    alumnos.push(nuevoAlumno);
+    localStorage.setItem('alumnos', JSON.stringify(alumnos)); 
+
     mostrarNotas();
 });
 
